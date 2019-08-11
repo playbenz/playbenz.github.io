@@ -5,6 +5,159 @@
 <META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT"> 
 <META HTTP-EQUIV="expires" CONTENT="0">
 <META HTTP-EQUIV="Set-Cookie" CONTENT="cookievalue=xxx;expires=Wednesday, 21-Oct-98 16:14:21 GMT; path=/">
+<head>
+  
+  <style type="text/css">
+
+html{ overflow: hidden; } 
+body{
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		width: 100%;
+	}
+#ed_url{
+		height:100%;
+		width:100%;
+		position: absolute;
+		frameBorder:0;
+		border:0;
+		scrolling:auto; 
+		display:block;
+	}
+	
+#ad_image{
+    display: block;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+}
+
+
+#dv_ad_bar {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    z-index: 10;
+	bottom:0;
+    /*background: rgba(0,0,0,0.8);
+     opacity: 0.85; */
+   /* display: none;*/
+	
+	background-color: #df3031;
+	margin: 0 auto;
+	display:block;
+}
+#dv_pg_img {
+    width: 1px;
+    height: 1px;
+    position: fixed;
+    z-index: -3;
+    background: rgba(0,0,0,0.8);
+    /* opacity: 0.85; */
+    display: block;
+}
+.dv_close{
+    width: 25px;
+    height: 50px;
+    /* font-size: 15px; */
+    position: absolute;
+    right: 0;
+    /* background-color: #CDDC39; */
+    /* border-radius: 18px; */
+    top: 0px;
+    text-align: center;
+    /* line-height: 31px; */
+    cursor: pointer;
+    cursor: hand;
+    opacity: 0.8;
+}
+#dv_ad_describe {
+    width: 100%;
+   /* height: calc(100% - 50px);*/
+   height:100%;
+    position: fixed;
+    z-index: 10;
+	top:0;
+   /* background: rgba(0,0,0,0.8);*/
+   background: rgba(100,10,10,0.18);
+    /* opacity: 0.85; */
+   /* display: block;*/
+	text-align: center;
+	 display: none;
+	 z-index: 999;
+}
+
+#ad_img_describe {
+	/*width: auto;*/
+	width:100%;
+    /*height: 100%;*/
+	/*max-width: 100%;*/
+	height: calc(100% - 50px);*/
+	/*height: 100%;*/
+}
+#ad_close{
+	padding-top: 18px;
+    height: 15px;
+    position: absolute;
+    /* top: 1px; */
+    right: 2px;
+	
+}
+
+.dv_hs{
+width: calc(100% - 64px);
+    /*background-color: #E91E63;*/
+    height: 100%;
+    position: absolute;
+}
+#ad_txt
+{
+   padding-left: 55px;
+    color: #fff;
+    position: relative;
+    /* top: -10px; */
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 22px; 
+    height: 50px;
+	font-size: 18px;
+	font-weight: bold;
+	-webkit-padding-start: 53px;
+
+}
+
+#free-ad
+{
+	position: absolute;
+    background-color: #FFC107;
+    padding: 5px;
+    padding-top: 7px;
+    right: 20px;
+    width: 33px;
+    font-size: 15px;
+    height: 50px;
+	cursor: pointer;
+	text-align: center;
+}
+
+#dv_close{
+	position: absolute;
+    /*background-color: #E91E63;*/
+    right: 0px;
+    /* z-index: 1000; */
+    width: 20px;
+    height: 50px;
+    cursor: pointer;
+}
+</style>
+
+
+  
+  
+  </head>
 <body>
 
   
