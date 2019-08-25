@@ -36,7 +36,7 @@ function getURLLinkParam(url) {
  //init iframe 
 	var urlLink=getURLLinkParam(window.location.href);
 	if( urlLink==null)
-	  parent.iframe.src=urlLink;
+	  document.getElementById('my_url').src=urlLink;
  }
   
 </script>
