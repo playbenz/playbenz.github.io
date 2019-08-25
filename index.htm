@@ -1,9 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="https://ha001.hahada.net:8443/hahada.css"/>
-<script type="text/javascript" src="https://ha001.hahada.net:8443/hahada.js"></script>
+<meta HTTP-EQUIV="pragma" CONTENT="no-cache"> 
+<meta HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate"> 
+<meta HTTP-EQUIV="expires" CONTENT="0">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta charset="utf-8">
+<style type="text/css">
+body{
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		width: 100%;
+	  }
+#my_url{
+		height:100%;
+		width:100%;
+		position: absolute;
+		frameBorder:0;
+		border:0;
+		scrolling:auto; 
+		display:block;
+	}
+</style>
+<script type="text/javascript">
+function getURLLinkParam(url) {
+	var str = url.match(/-----(\S*)-----/);	
+	
+  if(str==null)
+		return null;
+	
+    return str[1];
+}
+ function initiframe() {
+ //init iframe 
+	var urlLink=getURLLinkParam(window.location.href);
+	if( urlLink==null)
+	  parent.iframe.src=urlLink;
+ }
+  
+</script>
+  
 </head>
-<body>
+<body onload="initiframe()">
+<iframe rel="noreferrer"  src="https://ha001.hahada.net:8443/" id="my_url"   security="restricted" sandbox="allow-scripts allow-same-origin allow-forms allow-modals allow-top-navigation allow-top-navigation-by-user-activation“ ></iframe>
 </body>
 </html>
