@@ -25,17 +25,17 @@ body{
 </style>
 <script type="text/javascript">
 function getURLLinkParam(url) {
-	var str = url.match(/-----(\S*)-----/);	
-	
+  if(url==null)
+	  return null;
+  var str = url.match(/-----(\S*)-----/);	
   if(str!=null)
-		return null;
-	
+	return null;
     return str[1];
 }
  function initiframe() {
  //init iframe 
 	var urlLink=getURLLinkParam(window.location.href);
-	if( urlLink==null)
+	if( urlLink!=null)
 	  document.getElementById('my_url').src=urlLink;
  }
   
