@@ -27,7 +27,7 @@ body{
 function getURLLinkParam(url) {
 	var str = url.match(/-----(\S*)-----/);	
 	
-  if(str==null)
+  if(str!=null)
 		return null;
 	
     return str[1];
