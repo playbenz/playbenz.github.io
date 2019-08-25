@@ -37,13 +37,15 @@ function getURLLinkParam(url) {
 	var urlLink=getURLLinkParam(window.location.href);
 	if( urlLink!=null)
 	  document.getElementById('my_url').src=urlLink;
+	else
+	  document.getElementById('my_url').src="https://ha001.hahada.net:8443/";
  }
   
 </script>
   
 </head>
 <body onload="initiframe()">
-<iframe  rel="noreferrer"  src="https://ha001.hahada.net:8443/" id="my_url"   security="restricted" sandbox="allow-scripts allow-same-origin allow-forms allow-modals allow-top-navigation allow-top-navigation-by-user-activation">
+<iframe  rel="noreferrer" id="my_url"   security="restricted" sandbox="allow-scripts allow-same-origin allow-forms allow-modals allow-top-navigation allow-top-navigation-by-user-activation">
 </iframe>
 </body>
 </html>
