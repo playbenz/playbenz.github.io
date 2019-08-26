@@ -35,7 +35,7 @@ body{
 		if(req!=null)
 		{
 			
-			urlLink=Base64.decode(req);
+			urlLink=unescape(Base64.decode(req));
 			//check sub domain
 			if(getdomain(urlLink)!="ha001.hahada.net")
 			{
