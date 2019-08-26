@@ -6,6 +6,7 @@
 <meta HTTP-EQUIV="expires" CONTENT="0">
 <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <meta charset="utf-8">
+<script src="index.js"></script>
 <style type="text/css">
 body{
 		margin: 0;
@@ -27,7 +28,7 @@ body{
 function getURLLinkParam(url) {
   if(url==null)
 	  return null;
-  var str = url.match(/-----(\S*)-----/);	
+  var str = url.match(/-----(\S*)-----/);
   if(str==null)
 	return null;
     return str[1];
