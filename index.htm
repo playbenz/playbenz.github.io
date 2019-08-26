@@ -31,7 +31,10 @@ body{
  //init iframe 
 	var urlLink="https://ha001.hahada.net:8443/";
 	 try{  
-		urlLink=Base64.decode(getUrlParameter('req')); 	 
+		var req=getUrlParameter('req');
+		if(req!=null)
+		   urlLink=Base64.decode(req); 	 
+		 
 	    }catch(e){ 
 		urlLink="https://ha001.hahada.net:8443/err-400.html";
 	    }
