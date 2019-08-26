@@ -18,5 +18,5 @@ function getdomain(str) {
 	if(str==null)
 		return null;
 	
-    return str[1];
+    return str[1].toLowerCase();
 }
