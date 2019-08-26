@@ -33,7 +33,13 @@ body{
 	 try{  
 		var req=getUrlParameter('req');
 		if(req!=null)
-		   urlLink=Base64.decode(req); 	 
+		{
+			
+			urlLink=Base64.decode(req);
+			//check sub domain
+			if(getdomain(urlLink)!="ha001.hahada.net")
+				throw "No permitted sub domain."
+		}
 		 
 	    }catch(e){ 
 		urlLink="https://ha001.hahada.net:8443/err-400.html";
@@ -46,7 +52,7 @@ body{
   
 </head>
 <body onload="init()">
-<iframe  rel="noreferrer" id="my_url"   security="restricted" sandbox="allow-scripts allow-same-origin allow-forms allow-modals allow-top-navigation allow-top-navigation-by-user-activation">
+<iframe  rel="noreferrer" id="my_url"   security="restricted" sandbox="allow-scripts allow-forms allow-modals allow-top-navigation allow-top-navigation-by-user-activation">
 </iframe>
 </body>
 </html>
