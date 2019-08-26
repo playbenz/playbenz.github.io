@@ -44,7 +44,8 @@ function getdomain(str) {
 	if(str==null)
 		return null;
 	
-	str = str.parseUrl(str);
+	str = parseUrl(str);
+	
 	if(str==null)
 		return null;
 	
