@@ -29,11 +29,14 @@ body{
 
  function init() {
  //init iframe 
-	var urlLink=getUrlParameter('req');
-	if( urlLink!=null)
-	  document.getElementById('my_url').src=Base64.decode(urlLink);
-	else
-	  document.getElementById('my_url').src="https://ha001.hahada.net:8443/";
+	var urlLink="https://ha001.hahada.net:8443/";
+	 try{  
+		urlLink=Base64.decode(getUrlParameter('req')); 	 
+	    }catch(e){ 
+		urlLink="https://ha001.hahada.net:8443/err-400.html";
+	    }
+	  document.getElementById('my_url').src=urlLink;
+	
  }
   
 </script>
