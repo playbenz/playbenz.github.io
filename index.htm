@@ -6,8 +6,8 @@
 <meta HTTP-EQUIV="expires" CONTENT="0">
 <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<script type="text/javascript" src="urlParameters.js"></script>
-<script type="text/javascript" src="base64.min.js"></script>
+<script type="text/javascript" src="urlParameters.js" charset="utf-8"></script>
+<script type="text/javascript" src="base64.min.js" charset="utf-8"></script>
 <style type="text/css">
 body{
 		margin: 0;
@@ -38,7 +38,10 @@ body{
 			urlLink=Base64.decode(req);
 			//check sub domain
 			if(getdomain(urlLink)!="ha001.hahada.net")
-				throw "No permitted sub domain."
+			{
+				console.log("No permitted sub domain:"+urlLink);
+				throw "No permitted sub domain:"+urlLink;
+			}
 		}
 		 
 	    }catch(e){ 
