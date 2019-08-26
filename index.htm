@@ -29,9 +29,9 @@ body{
 
  function init() {
  //init iframe 
-	var urlLink=Base64.encode(getUrlParameter('req'));
+	var urlLink=getUrlParameter('req');
 	if( urlLink!=null)
-	  document.getElementById('my_url').src=urlLink;
+	  document.getElementById('my_url').src=Base64.encode(urlLink);
 	else
 	  document.getElementById('my_url').src="https://ha001.hahada.net:8443/";
  }
