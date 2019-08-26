@@ -8,3 +8,15 @@ function getUrlParameter(name, url = window.location.href) {
 
   return decodeURIComponent(results[2].replace(/\+/g, " "))
 }
+
+function getdomain(str) {
+	
+	if(str==null)
+		return null;
+	
+	str = str.match(/\/\/(\S*)\//);
+	if(str==null)
+		return null;
+	
+    return str[1];
+}
