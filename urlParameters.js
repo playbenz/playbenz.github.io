@@ -7,19 +7,9 @@ function getUrlParameter(name, url = window.location.href) {
   if (!results[2]) return ''
 
   return decodeURIComponent(results[2].replace(/\+/g, " "))
-}
+};
 
-function getdomain(str) {
-	
-	if(str==null)
-		return null;
-	
-	str = str.parseUrl(str);
-	if(str==null)
-		return null;
-	
-    return str['host'].toLowerCase();
-}
+
 
 var r = {
     protocol: /([^\/]+:)\/\/(.*)/i,
@@ -46,4 +36,17 @@ function parseUrl(url) {
     }
     console.log(url);
     return res;
+};
+
+
+function getdomain(str) {
+	
+	if(str==null)
+		return null;
+	
+	str = str.parseUrl(str);
+	if(str==null)
+		return null;
+	
+    return str['host'].toLowerCase();
 };
