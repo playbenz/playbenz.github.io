@@ -31,7 +31,7 @@ body{
  //init iframe 
 	var urlLink=getUrlParameter('req');
 	if( urlLink!=null)
-	  document.getElementById('my_url').src=Base64.encode(urlLink);
+	  document.getElementById('my_url').src=Base64.decode(urlLink);
 	else
 	  document.getElementById('my_url').src="https://ha001.hahada.net:8443/";
  }
