@@ -6,7 +6,8 @@
 <meta HTTP-EQUIV="expires" CONTENT="0">
 <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <meta charset="utf-8">
-<script src="index.js"></script>
+<script src="urlParameters.js"></script>
+<script src="base64.min.js"></script>
 <style type="text/css">
 body{
 		margin: 0;
@@ -25,17 +26,10 @@ body{
 	}
 </style>
 <script type="text/javascript">
-function getURLLinkParam(url) {
-  if(url==null)
-	  return null;
-  var str = url.match(/-----(\S*)-----/);
-  if(str==null)
-	return null;
-    return str[1];
-}
- function initiframe() {
+
+ function init() {
  //init iframe 
-	var urlLink=getURLLinkParam(window.location.href);
+	var urlLink=Base64.encode(getUrlParameter('req'));
 	if( urlLink!=null)
 	  document.getElementById('my_url').src=urlLink;
 	else
@@ -45,7 +39,7 @@ function getURLLinkParam(url) {
 </script>
   
 </head>
-<body onload="initiframe()">
+<body onload="init()">
 <iframe  rel="noreferrer" id="my_url"   security="restricted" sandbox="allow-scripts allow-same-origin allow-forms allow-modals allow-top-navigation allow-top-navigation-by-user-activation">
 </iframe>
 </body>
