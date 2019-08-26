@@ -4,7 +4,7 @@
  * @param { String } value
  * @param { String } url
  */
-export function setUrlParameter(key, value, url = window.location.href) {
+ function setUrlParameter(key, value, url = window.location.href) {
   let reg = new RegExp("([?&])" + key + "=.*?(&|$)", "i")
   let separator = url.indexOf('?') !== -1 ? "&" : "?"
 
@@ -22,7 +22,7 @@ export function setUrlParameter(key, value, url = window.location.href) {
  * @param  { String } url
  * @return { String }
  */
-export function getUrlParameter(name, url = window.location.href) {
+ function getUrlParameter(name, url = window.location.href) {
   name = name.replace(/[\[\]]/g, "\\$&")
   let reg = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)", "i"),
     results = reg.exec(url)
@@ -40,7 +40,7 @@ export function getUrlParameter(name, url = window.location.href) {
  * @param  { String } url
  * @link http://stackoverflow.com/a/1634841/2029790
  */
-export function removeUrlParameter(parameter, url = window.location.href) {
+ function removeUrlParameter(parameter, url = window.location.href) {
   let urlparts = url.split('?')
 
   if (urlparts.length >= 2) {
