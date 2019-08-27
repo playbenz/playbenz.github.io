@@ -1,4 +1,4 @@
-function getUrlParameter(name, url = window.location.href) {
+function getUrlParameter(name, url) {
   name = name.replace(/[\[\]]/g, "\\$&")
   let reg = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)", "i"),
     results = reg.exec(url)
