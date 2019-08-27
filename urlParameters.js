@@ -1,12 +1,12 @@
 function getUrlParameter(name, url) {
-  name = name.replace(/[\[\]]/g, "\\$&")
-  let reg = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)", "i"),
-    results = reg.exec(url)
+  name = name.replace(/[\[\]]/g, "\\$&");
+  reg = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)", "i");
+    results = reg.exec(url);
 
-  if (!results) return null
-  if (!results[2]) return ''
+  if (!results) return null;
+  if (!results[2]) return '';
 
-  return decodeURIComponent(results[2].replace(/\+/g, " "))
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
 };
 
 
