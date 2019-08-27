@@ -1,4 +1,3 @@
-
 function getUrlParameter(name, url) {
   name = name.replace(/[\[\]]/g, "\\$&");
   reg = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)", "i");
