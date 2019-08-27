@@ -33,6 +33,7 @@ body{
 	 try{  
 		 alert(6);
 		var req=getUrlParameter('req');
+		 alert(7);
 		if(req!=null)
 		{
 			
@@ -48,6 +49,7 @@ body{
 		 
 	    }catch(e){ 
 		urlLink="https://ha001.hahada.net:8443/err-400.html";
+		alert(e);
 	    }
 	  document.getElementById('my_url').src=urlLink;
 	
