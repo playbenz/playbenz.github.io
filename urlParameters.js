@@ -1,4 +1,3 @@
-alert(999);
 
 function getUrlParameter(name, url) {
   name = name.replace(/[\[\]]/g, "\\$&");
