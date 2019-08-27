@@ -31,7 +31,7 @@ body{
  //init iframe 
 	var urlLink="https://ha001.hahada.net:8443/";
 	 try{  
-		var req=getUrlParameter('req');
+		var req=getUrlParameter('req'，window.location.href);
 		if(req!=null)
 		{
 			
