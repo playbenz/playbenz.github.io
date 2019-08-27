@@ -31,14 +31,11 @@ body{
  //init iframe 
 	var urlLink="https://ha001.hahada.net:8443/";
 	 try{  
-		 alert(6);
 		var req=getUrlParameter('req');
-		 alert(7);
 		if(req!=null)
 		{
 			
 			urlLink=unescape(Base64.decode(req));
-			alert(urlLink);
 			//check sub domain
 			if(getdomain(urlLink)!="ha001.hahada.net")
 			{
