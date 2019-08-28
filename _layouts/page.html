@@ -16,6 +16,7 @@
 
 				<!-- Header -->
 				<header id="header">
+					<a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
 				</header>
 
 				<!-- Nav -->
@@ -34,11 +35,15 @@
 					</section>
 
 					<!-- Footer -->
-					
-				</div>
+						<footer>
+              <ul class="actions">
+								<li><a href="{{ "/blog/" | absolute_url }}" class="button">Our Blog</a></li>
+              </ul>
+						</footer>
+					</div>
 
 				<!-- Footer -->
-        <!--{% include foot.html %} -->
+        {% include foot.html %}
 
 			</div>
 
