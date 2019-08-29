@@ -191,10 +191,10 @@
 		letter-spacing: 0.075em;
 		line-height: 1.5;
 		text-align: center;
-		text-transform: uppercase;
-		margin: (_size(padding) * 2) auto (_size(padding) * 1) auto;
-		width: calc(100% - #{_size(padding) * 2});
-		max-width: _size(wrapper);
+		//text-transform: uppercase;
+		margin: 1.5rem auto 1.5rem auto;
+		//width: calc(100% - #{_size(padding) * 2});
+		//max-width: _size(wrapper);
 		z-index: 2;
 
 		a {
