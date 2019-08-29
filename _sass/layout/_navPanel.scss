@@ -55,10 +55,12 @@
 		@include vendor('transform', 'translateX(20rem)');
 		//@include vendor('transition', ('transform #{_duration(menu)} ease', 'box-shadow #{_duration(menu)} ease', 'visibility #{_duration(menu)}'));
 		display: none;
+		color:#fff;
+		background-color:rgba(0, 0, 0, 0.30);
 		-webkit-overflow-scrolling: touch;
-		background: _palette(bg);
+		//background: _palette(bg);
 		box-shadow: none;
-		color: _palette(fg-bold);
+		//color: _palette(fg-bold);
 		height: 100%;
 		max-width: 80%;
 		overflow-y: auto;
