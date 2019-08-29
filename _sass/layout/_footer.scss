@@ -224,7 +224,7 @@
 		}
 
 		@include breakpoint(large) {
-			margin: (_size(padding) * 2) auto;
+			margin: (_size(padding)) auto;
 		}
 
 		@include breakpoint(xsmall) {
