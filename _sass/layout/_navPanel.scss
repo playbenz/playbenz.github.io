@@ -53,7 +53,7 @@
 
 	#navPanel {
 		@include vendor('transform', 'translateX(20rem)');
-		@include vendor('transition', ('transform #{_duration(menu)} ease', 'box-shadow #{_duration(menu)} ease', 'visibility #{_duration(menu)}'));
+		//@include vendor('transition', ('transform #{_duration(menu)} ease', 'box-shadow #{_duration(menu)} ease', 'visibility #{_duration(menu)}'));
 		display: none;
 		-webkit-overflow-scrolling: touch;
 		background: _palette(bg);
