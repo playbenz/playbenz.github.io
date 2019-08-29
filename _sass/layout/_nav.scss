@@ -21,8 +21,8 @@
 		overflow: hidden;
 		padding: 0 2rem 0 0;
 		position: relative;
-		width: calc(100% - #{_size(padding) * 2});
-		max-width: _size(wrapper);
+		//width: calc(100% - #{_size(padding) * 2});
+		//max-width: _size(wrapper);
 		z-index: 2;
 
 		ul {
