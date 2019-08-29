@@ -8,11 +8,10 @@
 
 	#navPanelToggle {
 		@include icon;
-		@include vendor('transition', (
-			'color #{_duration(transition)} ease-in-out',
-			'background-color #{_duration(transition)} ease-in-out',
-			'box-shadow #{_duration(transition)} ease-in-out'
-		));
+	
+		color:#fff;
+		background-color:rgba(0, 0, 0, 0.30);
+		box-shadow:0 0.125rem 0.75rem 0 rgba(30,37,45,0.25);
 		display: none;
 		position: fixed;
 		top: 0.75rem;
@@ -29,7 +28,7 @@
 
 		&:before {
 			content: '\f0c9';
-			margin-right: 0.5rem;
+			margin-right: 0.0rem;
 		}
 
 		&.alt {
