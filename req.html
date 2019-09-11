@@ -9,39 +9,28 @@
 
   <script type="text/javascript" src="https://js.users.51.la/20305777.js"></script>
 
-  <script type="text/javascript">
-  
-    /*
-    function GetQueryString(name)
-    {
-       var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-       var r = window.location.search.substr(1).match(reg);
-       if(r!=null)return  unescape(r[2]); return null;
-    }
-  
-    var gourl=GetQueryString("go");
-    if(gourl !=null && gourl.toString().length>1)
-    {
-      alert(gourl);
-      //setTimeout(function(){window.location.href=gourl;},500)
-      //window.location.href=gourl;
-    }
-    else
-      window.location.href="/400.html";
-  
-      */
-     //"http://192.168.0.3:8000/req.html?go=https://mp.weixin.qq.com/s?src=11&timestamp=1568111401&ver=1844&signature=HknaLS08anImneXo9ZI6zqr7GuYTnN2oZuci3htcwaUhYoW2udKsLlT0YeukimaMdQP4Tktd3bnahdFVra1XfSudYWpp7SpsxqdTTmYU7gx*nWIJVFXhK4uZwOnp4qIW&new=1";
-     //name=window.location.href;
-     window.οnlοad=function(){
-        var reg = new RegExp("=(.*)");
-        var r = window.location.href.match(reg);
-    
-        if(r!=null)
-          window.location.href=r[1];
-        else
-          window.location.href="/400.html";
-    }
+    <script type="text/javascript">
+
+
+    setTimeout( function(){
+
+
+    var reg = new RegExp("=(.*)");
+      var r = window.location.href.match(reg);
+
+      if(r!=null)
+        window.location.href=r[1];
+      else
+        window.location.href="/400.html";
+      
+
+
+    },300 );
+
+        
     </script>
+
+
 
 </head>
 <body>
