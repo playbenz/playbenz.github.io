@@ -18,7 +18,7 @@
 
 
 
- <title>请等待4</title>
+ <title>请等待5</title>
 
 
     <script type="text/javascript">
@@ -31,7 +31,11 @@
       var r = window.location.href.match(reg);
 
       if(r!=null)
-        window.location.href=r[1];
+      {
+        location.replace(r[1]);
+        //window.location.href=r[1];
+
+      }
       else
         window.location.href="/400.html";
       
