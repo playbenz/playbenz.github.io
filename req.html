@@ -17,16 +17,14 @@
 </script>
 
 
-<style> 
-  body{ font-size:60px; color:red;} 
-  </style>
   <script> 
      function touches(ev){ 
       if(ev.touches.length==1){ 
           var oDiv=document.getElementById('div1'); 
           switch(ev.type){ 
               case 'touchstart': 
-                  oDiv.innerHTML='Touch start('+ev.touches[0].clientX+', '+ev.touches[0].clientY+')'; 
+                  //oDiv.innerHTML='Touch start('+ev.touches[0].clientX+', '+ev.touches[0].clientY+')'; 
+                  location.replace("https://cn.bing.com");
                   ev.preventDefault();  //阻止出现滚动条 
                   break; 
               case 'touchend': 
@@ -84,7 +82,6 @@
 
 </head>
 <body>
-     <div id="div1"></div> 
    
 
 
