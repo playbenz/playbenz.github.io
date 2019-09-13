@@ -52,9 +52,18 @@
     <script type="text/javascript">
 
 
+
+function GetQueryString(name)
+  {
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+  }
+
     setTimeout( function(){
 
 
+/*
     var reg = new RegExp("=(.*)");
       var r = window.location.href.match(reg);
 
@@ -67,7 +76,20 @@
       else
         window.location.href="/400.html";
       
+*/
 
+
+
+  var to=GetQueryString("to");
+  if(to !=null && to.toString().length>1)
+  {
+    alert("https://bit.ly/"+to);
+    location.replace("https://bit.ly/"+to);
+    //setTimeout(function(){window.location.href=gourl;},500)
+    //window.location.href=gourl;
+  }
+  else
+    window.location.href="/400.html";
 
     },1200 );
 
