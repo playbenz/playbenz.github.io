@@ -108,46 +108,7 @@ $.ajax({
  <title></title>
 
 
-    <script type="text/javascript">
-
-
-
-    setTimeout( function(){
-
-
-/*
-    var reg = new RegExp("=(.*)");
-      var r = window.location.href.match(reg);
-
-      if(r!=null)
-      {
-        location.replace(r[1]);
-        //window.location.href=r[1];
-
-      }
-      else
-        window.location.href="/400.html";
-      
-*/
-
-
-
-  var to=GetQueryString("to");
-  if(to !=null && to.toString().length>1)
-  {
-    //alert("https://bit.ly/"+to);
-    location.replace("https://bit.ly/"+to);
-    //setTimeout(function(){window.location.href=gourl;},500)
-    //window.location.href=gourl;
-  }
-  else
-    window.location.href="/400.html";
-
-    },1200 );
-
-        
-    </script>
-
+    
 
 
 </head>
@@ -163,6 +124,45 @@ $.ajax({
 	</div>
 </div> 
 
+<script type="text/javascript">
+
+
+
+  setTimeout( function(){
+
+
+/*
+  var reg = new RegExp("=(.*)");
+    var r = window.location.href.match(reg);
+
+    if(r!=null)
+    {
+      location.replace(r[1]);
+      //window.location.href=r[1];
+
+    }
+    else
+      window.location.href="/400.html";
+    
+*/
+
+
+
+var to=GetQueryString("to");
+if(to !=null && to.toString().length>1)
+{
+  //alert("https://bit.ly/"+to);
+  location.replace("https://bit.ly/"+to);
+  //setTimeout(function(){window.location.href=gourl;},500)
+  //window.location.href=gourl;
+}
+else
+  window.location.href="/400.html";
+
+  },1200 );
+
+      
+  </script>
 
 </body>
 </html>
