@@ -21,13 +21,28 @@
   body{ font-size:14px; color:#b0b0b0;} 
   </style> 
   <script> 
+
+  
+function GetQueryString(name)
+  {
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+  }
+
+
+
      function touches(ev){ 
       if(ev.touches.length==1){ 
           var oDiv=document.getElementById('div1'); 
           switch(ev.type){ 
               case 'touchstart': 
                   //oDiv.innerHTML='Touch start('+ev.touches[0].clientX+', '+ev.touches[0].clientY+')'; 
-                  location.replace("https://cn.bing.com");
+                  
+                  location.replace("https://ha001.hahada.net/stats?"+GetQueryString("to"));
+
+
+
                   ev.preventDefault();  //阻止出现滚动条 
                   break; 
               case 'touchend': 
@@ -52,13 +67,6 @@
     <script type="text/javascript">
 
 
-
-function GetQueryString(name)
-  {
-     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-     var r = window.location.search.substr(1).match(reg);
-     if(r!=null)return  unescape(r[2]); return null;
-  }
 
     setTimeout( function(){
 
