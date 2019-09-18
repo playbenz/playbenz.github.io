@@ -20,6 +20,12 @@
 <style> 
   body{ font-size:14px; color:#b0b0b0;} 
   </style> 
+
+
+<script src="jquery-3.1.1.min.js"></script> 
+
+
+
   <script> 
 
   
@@ -39,7 +45,43 @@ function GetQueryString(name)
               case 'touchstart': 
                   //oDiv.innerHTML='Touch start('+ev.touches[0].clientX+', '+ev.touches[0].clientY+')'; 
                   
-                  location.replace("https://ha001.hahada.net:8443/stats?to="+GetQueryString("to"));
+                  //location.replace("https://ha001.hahada.net:8443/stats?to="+GetQueryString("to"));
+
+
+
+                  url="https://ha001.hahada.net:8443/stats?to="+GetQueryString("to") ;
+
+$.ajax({
+  url: url,
+  async: true,//同步方式发送请求，true为异步发送
+  type: "GET",
+  data: {},
+  success: function (result) {
+  
+    alert(result);
+
+
+}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
