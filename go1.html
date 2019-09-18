@@ -5,6 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 <head>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147537495-1"></script>
 <script>
@@ -14,34 +15,73 @@
   gtag('config', 'UA-147537495-1');
 </script>
 <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+<script> 
+
+  
+  </script>
 <title></title>
 </head>
 <body style="margin: 0px;font-size: 14px;color: #b0b0b0;">
 <div id="div1" style="text-align: center;height: 100%;width: 100%;position: absolute;">
-  <div style="position: fixed;bottom: 20px;width: 100%;">
-    <div style="border-bottom: 1px solid #b0b0b0;">"图片+二维码"合成器</div>
-    <span>hahada.net</span> </div>
+  <div style="
+    position: fixed;
+    bottom: 20px;
+    width: 100%;">
+<div style="border-bottom: 1px solid #b0b0b0;">"图片+二维码"合成器
 </div>
+    <span>hahada.net</span>
+	</div>
+</div>
+	
+	
+
 <script type="text/javascript">
 
-	function GetQueryString(name)
-	{
-		 var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-		 var r = window.location.search.substr(1).match(reg);
-		 if(r!=null)return  unescape(r[2]); return null;
-	}
 
 
-	go_time=setTimeout( function(){
-	var to=GetQueryString("to");
-	if(to !=null && to.toString().length>1)
-	{
-	  location.replace("https://bit.ly/"+to);
-	}
-	else
-	  window.location.href="/400.html";
+var_time=setTimeout( function(){
 
-	},1500 );
+
+/*
+  var reg = new RegExp("=(.*)");
+    var r = window.location.href.match(reg);
+
+    if(r!=null)
+    {
+      location.replace(r[1]);
+      //window.location.href=r[1];
+
+    }
+    else
+      window.location.href="/400.html";
+    
+*/
+
+
+	
+function GetQueryString(name)
+  {
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+  }
+
+
+var to=GetQueryString("to");
+if(to !=null && to.toString().length>1)
+{
+  //alert("https://bit.ly/"+to);
+  location.replace("https://bit.ly/"+to);
+  //setTimeout(function(){window.location.href=gourl;},500)
+  //window.location.href=gourl;
+}
+else
+  window.location.href="/400.html";
+
+  },1500 );
+
+     
+
 
      function touches(ev){ 
       if(ev.touches.length==1){ 
@@ -52,8 +92,8 @@
                   
                   //location.replace("https://ha001.hahada.net:8443/stats?to="+GetQueryString("to"));
 
-				  clearTimeout(go_time);
-				  
+
+
                   url="https://ha001.hahada.net:8443/stats?to="+GetQueryString("to") ;
 
                   $.ajax({
@@ -61,9 +101,12 @@
                     async: true,//同步方式发送请求，true为异步发送
                     type: "GET",
                     data: {},
-                    success: function (result) {                    
+                    success: function (result) {
+                    
                       //alert(result);
                       location.replace('https://cn.bing.com/dict/search?q='+result+'++%23访问量%23');
+
+
 
                   }
                   });
@@ -83,7 +126,6 @@
   document.addEventListener('touchstart',touches,false); 
   //document.addEventListener('touchend',touches,false); 
   //document.addEventListener('touchmove',touches,false); 
-	
   </script>
 </body>
 </html>
